@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Tambola numbers</title>
+    <style>
+        * {
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            text-align: center;
+            font-family: sans-serif;
+            color: white;
+            border: 4px solid transparent;
+            border-image: linear-gradient(45deg, #ff0, #f0f, #f00, #00f, #0f0);
+            border-image-slice: 1;
+        }
+
+        .container {
+            max-width: 500px;
+            padding: 50px 0;
+        }
+
+        #number {
+            height: 70px;
+            width: 70px;
+            /* margin: auto; */
+            /* margin-top: 10px; */
+            /* margin-bottom: 10px; */
+            font-size: 50px;
+            padding: 5px;
+            background: black;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #4cf88f;
+        }
+
+        h1 span {
+            font-size: 20px;
+        }
+
+        .myborder {
+
+            padding: 2px;
+            width: 75px;
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            background: rgb(131, 58, 180);
+            background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+            border-radius: 10px;
+        }
+
+        #start {
+            width: 80%;
+            height: 75px;
+            background: #ea2ef5;
+            border: 1px solid #ea2ef5;
+            border-radius: 50px;
+            margin: 20px 0;
+            font-size: 45px;
+            font-weight: 600;
+
+        }
+
+        #buttons button {
+            margin: 5px 5px;
+            background: black;
+            border: 1px solid #00c1c0;
+            color: white;
+            height: 25px;
+            font-size: 12px;
+            padding: 1px;
+            width: 25px;
+        }
+
+        #text {
+            color: #f7e600;
+            /* margin: 5px 0; */
+            margin-bottom: 5px;
+        }
+
+        #reset {
+            width: 150px;
+            height: 50px;
+            background: #00f2e3;
+            /* margin: 10px 0; */
+            border: 1px solid #00f2e3;
+            font-size: 25px;
+            border-radius: 50px;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+
+        #gameover {
+            margin-top: 20px;
+            color: red;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tambola <span>(housiee)</span></h1>
+        <div class="myborder">
+            <div id="number"></div>
+        </div>
+        <button id="start" onclick="start()">Next</button>
+        <div id="text">Numbers</div>
+        <div id="buttons"></div>
+        <p id="gameover">All the best</p>
+        <button id="reset" onclick="location.reload()">Reset</button>
+    </div>
+    </div>
+    <script>
+        "use strict";
+
+
+        function chart() {
+            var button = "";
+            for (var i = 1; i < 91; i++) {
+                button += "<button id='" + i + "'>" + i + "</button>";
+
+            }
+            return button;
+        }
+
+        function start() {
+            var arr = [];
+            "use strict";
+            var num = Math.floor(Math.random() * 90 + 1);
+            for (let i = 0; i < arr.length; i++) {
+                if (num == arr(i)) {
+                    num = Math.floor(Math.random() * 90 + 1);
+                    i = 0;
+                }
+            }
+            document.getElementById("number").innerHTML = num;
+            document.getElementById(num).style.backgroundColor = "#00c1c0";
+            document.getElementById(num).style.color = "black";
+            document.getElementById(num).style.fontWeight = "800";
+            if (arr.length == 90) {
+                document.getElementById("gameover").innerHTML = "Game over";
+            }
+            arr.push(num);
+
+        }
+        document.getElementById("buttons").innerHTML = chart();
+    </script>
+</body>
+
+</html>
