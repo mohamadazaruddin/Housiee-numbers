@@ -14,8 +14,10 @@
 
         body {
             background-color: black;
+            height: 100vh;
             text-align: center;
             font-family: sans-serif;
+            position: relative;
             color: white;
             border: 4px solid transparent;
             border-image: linear-gradient(45deg, #ff0, #f0f, #f00, #00f, #0f0);
@@ -23,24 +25,32 @@
         }
 
         .container {
-            max-width: 500px;
+
             padding: 50px 0;
+            position: absolute;
+            /* left: 50%; */
+            top: 50%;
+            transform: translateY(-50%);
         }
 
         #number {
-            height: 70px;
-            width: 70px;
+            height: 340px;
+            width: 340px;
             /* margin: auto; */
             /* margin-top: 10px; */
             /* margin-bottom: 10px; */
-            font-size: 50px;
+            display: flex;
+            font-size: 280px;
             padding: 5px;
             background: black;
             border-radius: 10px;
+            align-items: center;
+            justify-content: center;
         }
 
         h1 {
             color: #4cf88f;
+            font-size: 90px;
         }
 
         h1 span {
@@ -50,8 +60,8 @@
         .myborder {
 
             padding: 2px;
-            width: 75px;
-            height: 75px;
+            width: 350px;
+            height: 350px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -63,46 +73,50 @@
 
         #start {
             width: 80%;
-            height: 75px;
+            height: 200px;
             background: #ea2ef5;
             border: 1px solid #ea2ef5;
             border-radius: 50px;
-            margin: 20px 0;
-            font-size: 45px;
+            margin: 77px 0 25px 0px;
+            font-size: 120px;
             font-weight: 600;
-
         }
 
+
+
         #buttons button {
-            margin: 5px 5px;
+            margin: 10px 10px;
             background: black;
             border: 1px solid #00c1c0;
             color: white;
-            height: 25px;
-            font-size: 12px;
+            height: 50px;
+            font-size: 23px;
             padding: 1px;
-            width: 25px;
+            width: 50px;
         }
 
         #text {
             color: #f7e600;
             /* margin: 5px 0; */
+            font-size: 50px;
             margin-bottom: 5px;
+
         }
 
         #reset {
-            width: 150px;
-            height: 50px;
+            width: 350px;
+            height: 100px;
             background: #00f2e3;
             /* margin: 10px 0; */
             border: 1px solid #00f2e3;
-            font-size: 25px;
+            font-size: 50px;
             border-radius: 50px;
             margin-top: 20px;
             font-weight: 600;
         }
 
         #gameover {
+            font-size: 35px;
             margin-top: 20px;
             color: red;
         }
@@ -140,15 +154,26 @@
         }
 
         function start() {
+
             var arr = [];
             "use strict";
             var num = Math.floor(Math.random() * 90 + 1);
             for (let i = 0; i < arr.length; i++) {
                 if (num == arr(i)) {
+
+                    num = Math.floor(Math.random() * 90 + 1);
+                    alert("erlkfjajkl");
+                    i = 0;
+                }
+
+
+                if (num == arr(i)) {
                     num = Math.floor(Math.random() * 90 + 1);
                     i = 0;
                 }
+
             }
+
             document.getElementById("number").innerHTML = num;
             document.getElementById(num).style.backgroundColor = "#00c1c0";
             document.getElementById(num).style.color = "black";
@@ -157,7 +182,7 @@
                 document.getElementById("gameover").innerHTML = "Game over";
             }
             arr.push(num);
-
+            console.log(num, "num");
         }
         document.getElementById("buttons").innerHTML = chart();
     </script>
