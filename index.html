@@ -116,9 +116,40 @@
         }
 
         #gameover {
-            font-size: 35px;
-            margin-top: 20px;
-            color: red;
+            font-size: 350px;
+            margin-top: 55px;
+            color: white;
+        }
+
+        #gameoverdiv span {
+            font-size: 50px;
+            color: #ff0707;
+            font-weight: bold;
+        }
+
+        #gameoverdiv {
+            height: 750px;
+            width: 750px;
+            background: rgb(0, 0, 0);
+            z-index: 1000;
+            position: absolute;
+            top: 50%;
+            padding: 30px 0px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 4px solid transparent;
+            border-image: linear-gradient(45deg, #ff0, #f0f, #f00, #00f, #0f0);
+            border-image-slice: 1;
+            display: none;
+        }
+
+        #resettwo {
+            width: 80%;
+            height: 90px;
+            margin-top: 30px;
+            font-size: 50px;
+            background: #0a1eff;
+            color: white;
         }
     </style>
 
@@ -136,13 +167,168 @@
         <button id="start" onclick="start()">Next</button>
         <div id="text">Numbers</div>
         <div id="buttons"></div>
-        <p id="gameover">All the best</p>
+        <div id="gameoverdiv">
+            <span>
+                THE GAME ENDS WITH
+            </span>
+            <p id="gameover"></p>
+            <button id="resettwo" onclick="location.reload()">Reset</button>
+        </div>
+
         <button id="reset" onclick="location.reload()">Reset</button>
+        <div class="audiosfornum">
+            <!-- 1 to 10 -->
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <audio id="audiotwoof90" src="voices/two.mp3"></audio>
+            <audio id="audiothreeof90" src="voices/three.mp3"></audio>
+            <audio id="audiofourof90" src="voices/four.mp3"></audio>
+            <audio id="audiofiveof90" src="voices/five.mp3"></audio>
+            <audio id="audiosixof90" src="voices/six.mp3"></audio>
+            <audio id="audiosevenof90" src="voices/seven.mp3"></audio>
+            <audio id="audioeightof90" src="voices/eight.mp3"></audio>
+            <audio id="audionineof90" src="voices/nine.mp3"></audio>
+            <audio id="audiotenof90" src="voices/ten.mp3"></audio>
+            <!-- 11 to 20 -->
+            <audio id="audio11of90" src="voices/eleven.mp3"></audio>
+            <audio id="audio12of90" src="voices/twelve.mp3"></audio>
+            <audio id="audio13of90" src="voices/thirteen.mp3"></audio>
+            <audio id="audio14of90" src="voices/fourteen.mp3"></audio>
+            <audio id="audio15of90" src="voices/fifteen.mp3"></audio>
+            <audio id="audio16of90" src="voices/sixteen.mp3"></audio>
+            <audio id="audio17of90" src="voices/seventeen.mp3"></audio>
+            <audio id="audio18of90" src="voices/eighteen.mp3"></audio>
+            <audio id="audio19of90" src="voices/ninteen.mp3"></audio>
+            <audio id="audio20of90" src="voices/twenty.mp3"></audio>
+            <!-- 21 to 30 -->
+            <audio id="audio21of90" src="voices/twentyone.mp3"></audio>
+            <audio id="audio22of90" src="voices/twentytwo.mp3"></audio>
+            <audio id="audio23of90" src="voices/twentythree.mp3"></audio>
+            <audio id="audio24of90" src="voices/twentyfour.mp3"></audio>
+            <audio id="audio25of90" src="voices/twentyfive.mp3"></audio>
+            <audio id="audio26of90" src="voices/twentysix.mp3"></audio>
+            <audio id="audio27of90" src="voices/twentyseven.mp3"></audio>
+            <audio id="audio28of90" src="voices/twentyeight.mp3"></audio>
+            <audio id="audio29of90" src="voices/twentynine.mp3"></audio>
+            <audio id="audio30of90" src="voices/thirty.mp3"></audio>
+            <!-- 31 to 40 -->
+            <audio id="audio41of90" src="voices/one.mp3"></audio>
+            <audio id="audiotwoof90" src="voices/two.mp3"></audio>
+            <audio id="audiothreeof90" src="voices/three.mp3"></audio>
+            <audio id="audiofourof90" src="voices/four.mp3"></audio>
+            <audio id="audiofiveof90" src="voices/five.mp3"></audio>
+            <audio id="audiosixof90" src="voices/six.mp3"></audio>
+            <audio id="audiosevenof90" src="voices/seven.mp3"></audio>
+            <audio id="audioeightof90" src="voices/eight.mp3"></audio>
+            <audio id="audionineof90" src="voices/nine.mp3"></audio>
+            <audio id="audiotenof90" src="voices/ten.mp3"></audio>
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <!-- 41 to 50 -->
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <audio id="audiotwoof90" src="voices/two.mp3"></audio>
+            <audio id="audiothreeof90" src="voices/three.mp3"></audio>
+            <audio id="audiofourof90" src="voices/four.mp3"></audio>
+            <audio id="audiofiveof90" src="voices/five.mp3"></audio>
+            <audio id="audiosixof90" src="voices/six.mp3"></audio>
+            <audio id="audiosevenof90" src="voices/seven.mp3"></audio>
+            <audio id="audioeightof90" src="voices/eight.mp3"></audio>
+            <audio id="audionineof90" src="voices/nine.mp3"></audio>
+            <audio id="audiotenof90" src="voices/ten.mp3"></audio>
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <!-- 51 to 60 -->
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <audio id="audiotwoof90" src="voices/two.mp3"></audio>
+            <audio id="audiothreeof90" src="voices/three.mp3"></audio>
+            <audio id="audiofourof90" src="voices/four.mp3"></audio>
+            <audio id="audiofiveof90" src="voices/five.mp3"></audio>
+            <audio id="audiosixof90" src="voices/six.mp3"></audio>
+            <audio id="audiosevenof90" src="voices/seven.mp3"></audio>
+            <audio id="audioeightof90" src="voices/eight.mp3"></audio>
+            <audio id="audionineof90" src="voices/nine.mp3"></audio>
+            <audio id="audiotenof90" src="voices/ten.mp3"></audio>
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <!-- 61 to 70 -->
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <audio id="audiotwoof90" src="voices/two.mp3"></audio>
+            <audio id="audiothreeof90" src="voices/three.mp3"></audio>
+            <audio id="audiofourof90" src="voices/four.mp3"></audio>
+            <audio id="audiofiveof90" src="voices/five.mp3"></audio>
+            <audio id="audiosixof90" src="voices/six.mp3"></audio>
+            <audio id="audiosevenof90" src="voices/seven.mp3"></audio>
+            <audio id="audioeightof90" src="voices/eight.mp3"></audio>
+            <audio id="audionineof90" src="voices/nine.mp3"></audio>
+            <audio id="audiotenof90" src="voices/ten.mp3"></audio>
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <!-- 71 to 80 -->
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <audio id="audiotwoof90" src="voices/two.mp3"></audio>
+            <audio id="audiothreeof90" src="voices/three.mp3"></audio>
+            <audio id="audiofourof90" src="voices/four.mp3"></audio>
+            <audio id="audiofiveof90" src="voices/five.mp3"></audio>
+            <audio id="audiosixof90" src="voices/six.mp3"></audio>
+            <audio id="audiosevenof90" src="voices/seven.mp3"></audio>
+            <audio id="audioeightof90" src="voices/eight.mp3"></audio>
+            <audio id="audionineof90" src="voices/nine.mp3"></audio>
+            <audio id="audiotenof90" src="voices/ten.mp3"></audio>
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <!-- 81 to 90 -->
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <audio id="audiotwoof90" src="voices/two.mp3"></audio>
+            <audio id="audiothreeof90" src="voices/three.mp3"></audio>
+            <audio id="audiofourof90" src="voices/four.mp3"></audio>
+            <audio id="audiofiveof90" src="voices/five.mp3"></audio>
+            <audio id="audiosixof90" src="voices/six.mp3"></audio>
+            <audio id="audiosevenof90" src="voices/seven.mp3"></audio>
+            <audio id="audioeightof90" src="voices/eight.mp3"></audio>
+            <audio id="audionineof90" src="voices/nine.mp3"></audio>
+            <audio id="audiotenof90" src="voices/ten.mp3"></audio>
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <audio id="audiooneof90" src="voices/one.mp3"></audio>
+            <!-- audio ended -->
+        </div>
     </div>
     </div>
     <script>
         "use strict";
+        // 1-10
+        var audioone = document.getElementById("audiooneof90");
+        var audiotwo = document.getElementById("audiotwoof90");
+        var audiothree = document.getElementById("audiothreeof90");
+        var audiofour = document.getElementById("audiofourof90");
+        var audiofive = document.getElementById("audiofiveof90");
+        var audiosix = document.getElementById("audiosixof90");
+        var audioseven = document.getElementById("audiosevenof90");
+        var audioeight = document.getElementById("audioeightof90");
+        var audionine = document.getElementById("audionineof90");
+        var audioten = document.getElementById("audiotenof90");
 
+        // 11-20
+        var audio11 = document.getElementById("audio11of90");
+        var audio12 = document.getElementById("audio12of90");
+        var audio13 = document.getElementById("audio13of90");
+        var audio14 = document.getElementById("audio14of90");
+        var audio15 = document.getElementById("audio15of90");
+        var audio16 = document.getElementById("audio16of90");
+        var audio17 = document.getElementById("audio17of90");
+        var audio18 = document.getElementById("audio18of90");
+        var audio19 = document.getElementById("audio19of90");
+        var audio20 = document.getElementById("audio20of90");
+        // 21-30
+        var audio21 = document.getElementById("audio21of90");
+        var audio22 = document.getElementById("audio22of90");
+        var audio23 = document.getElementById("audio23of90");
+        var audio24 = document.getElementById("audio24of90");
+        var audio25 = document.getElementById("audio25of90");
+        var audio26 = document.getElementById("audio26of90");
+        var audio27 = document.getElementById("audio27of90");
+        var audio28 = document.getElementById("audio28of90");
+        var audio29 = document.getElementById("audio29of90");
+        var audio30 = document.getElementById("audio30of90");
+        // 31-40
 
         function chart() {
             var button = "";
@@ -152,39 +338,131 @@
             }
             return button;
         }
+        document.getElementById("buttons").innerHTML = chart();
+        // button looped
+
+        const points = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+            26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50,
+            51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75,
+            76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90
+        ];
+        points.sort(function (a, b) {
+            return 0.5 - Math.random()
+        });
+
+
+        const shuffledarr = points;
+        console.log(shuffledarr)
+
 
         function start() {
 
-            var arr = [];
-            "use strict";
-            var num = Math.floor(Math.random() * 90 + 1);
-            for (let i = 0; i < arr.length; i++) {
-                if (num == arr(i)) {
-
-                    num = Math.floor(Math.random() * 90 + 1);
-                    alert("erlkfjajkl");
-                    i = 0;
-                }
-
-
-                if (num == arr(i)) {
-                    num = Math.floor(Math.random() * 90 + 1);
-                    i = 0;
-                }
-
+            var num = shuffledarr.pop();
+            // 1-10
+            if (num == 1) {
+                audioone.play()
             }
-
+            if (num == 2) {
+                audiotwo.play()
+            }
+            if (num == 3) {
+                audiothree.play()
+            }
+            if (num == 4) {
+                audiofour.play()
+            }
+            if (num == 5) {
+                audiofive.play()
+            }
+            if (num == 6) {
+                audiosix.play()
+            }
+            if (num == 7) {
+                audioseven.play()
+            }
+            if (num == 8) {
+                audioeight.play()
+            }
+            if (num == 9) {
+                audionine.play()
+            }
+            if (num == 10) {
+                audioten.play()
+            }
+            // 11-20
+            if (num == 11) {
+                audio11.play()
+            }
+            if (num == 12) {
+                audio12.play()
+            }
+            if (num == 13) {
+                audio13.play()
+            }
+            if (num == 14) {
+                audio14.play()
+            }
+            if (num == 15) {
+                audio15.play()
+            }
+            if (num == 16) {
+                audio16.play()
+            }
+            if (num == 17) {
+                audio17.play()
+            }
+            if (num == 18) {
+                audio18.play()
+            }
+            if (num == 19) {
+                audio19.play()
+            }
+            if (num == 20) {
+                audio20.play()
+            }
+            // 21-30+
+            if (num == 21) {
+                audio21.play()
+            }
+            if (num == 22) {
+                audio22.play()
+            }
+            if (num == 23) {
+                audio23.play()
+            }
+            if (num == 24) {
+                audio24.play()
+            }
+            if (num == 25) {
+                audio25.play()
+            }
+            if (num == 26) {
+                audio26.play()
+            }
+            if (num == 27) {
+                audio27.play()
+            }
+            if (num == 28) {
+                audio28.play()
+            }
+            if (num == 29) {
+                audio29.play()
+            }
+            if (num == 30) {
+                audio30.play()
+            }
+            // console.log(num)
             document.getElementById("number").innerHTML = num;
             document.getElementById(num).style.backgroundColor = "#00c1c0";
             document.getElementById(num).style.color = "black";
             document.getElementById(num).style.fontWeight = "800";
-            if (arr.length == 90) {
-                document.getElementById("gameover").innerHTML = "Game over";
+            if (shuffledarr.length == 0) {
+                document.getElementById("gameover").innerHTML = num;
+                document.getElementById("gameoverdiv").style.display = "block";
+
             }
-            arr.push(num);
-            console.log(num, "num");
+
         }
-        document.getElementById("buttons").innerHTML = chart();
     </script>
 </body>
 
