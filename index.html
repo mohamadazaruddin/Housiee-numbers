@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Tambola game</title>
-    <style> 
+    <style>
         * {
             margin: 0 auto;
             box-sizing: border-box;
@@ -156,6 +156,68 @@
             font-weight: 600;
             justify-content: center;
             padding: 22px 0;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .container {
+                transform: translate(0px, 0px);
+                position: fixed;
+            }
+
+            h1 {
+                font-size: 50px;
+            }
+
+            .myborder {
+                width: 160px;
+                height: 160px;
+            }
+
+            #start {
+                width: 80%;
+                height: 70px;
+                background: #ea2ef5;
+                border: 1px solid #ea2ef5;
+                border-radius: 50px;
+                margin: 30px 0 25px 0px;
+                font-size: 60px;
+                font-weight: 600;
+            }
+
+            #text {
+                font-size: 25px;
+            }
+
+            #buttons button {
+                margin: 10px 10px;
+                background: black;
+                border: 1px solid #00c1c0;
+                color: white;
+                height: 25px;
+                font-size: 15px;
+                padding: 1px;
+                width: 25px;
+            }
+
+            #reset {
+                width: 350px;
+                height: 50px;
+                background: #00f2e3;
+                /* margin: 10px 0; */
+                border: 1px solid #00f2e3;
+                font-size: 35px;
+                border-radius: 50px;
+                margin-top: 20px;
+                font-weight: 600;
+            }
+
+            #number {
+                font-size: 120px;
+            }
+
+
+
+
         }
     </style>
 
