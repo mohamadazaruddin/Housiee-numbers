@@ -6,164 +6,171 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>Tambola game</title>
-    <style>
-        * {
-            margin: 0 auto;
-            box-sizing: border-box;
-        }
 
-        body {
-            background-color: black;
-            height: 100vh;
-            text-align: center;
-            font-family: sans-serif;
-            position: relative;
-            color: white;
-            border: 4px solid transparent;
-            border-image: linear-gradient(45deg, #ff0, #f0f, #f00, #00f, #0f0);
-            border-image-slice: 1;
-        }
+    <head>
+        <style>
+            * {
+                margin: 0 auto;
+                box-sizing: border-box;
+            }
 
-        .container {
+            body {
+                background-color: black;
+                height: 100vh;
+                text-align: center;
+                font-family: sans-serif;
+                position: relative;
+                color: white;
+                border: 4px solid transparent;
+                border-image: linear-gradient(45deg, #ff0, #f0f, #f00, #00f, #0f0);
+                border-image-slice: 1;
+            }
 
-            padding: 50px 0;
-            position: absolute;
-            /* left: 50%; */
-            top: 50%;
-            transform: translateY(-50%);
-        }
+            .container {
 
-        #number {
-            height: 340px;
-            width: 340px;
-            /* margin: auto; */
-            /* margin-top: 10px; */
-            /* margin-bottom: 10px; */
-            display: flex;
-            font-size: 280px;
-            padding: 5px;
-            background: black;
-            border-radius: 10px;
-            align-items: center;
-            justify-content: center;
-        }
+                padding: 50px 0;
+                position: absolute;
+                /* left: 50%; */
+                top: 50%;
+                transform: translateY(-50%);
 
-        h1 {
-            color: #4cf88f;
-            font-size: 90px;
-        }
+            }
 
-        h1 span {
-            font-size: 35px;
-        }
+            #number {
+                height: 340px;
+                width: 340px;
+                /* margin: auto; */
+                /* margin-top: 10px; */
+                /* margin-bottom: 10px; */
+                display: flex;
+                font-size: 280px;
+                padding: 5px;
+                background: black;
+                border-radius: 10px;
+                align-items: center;
+                justify-content: center;
+            }
 
-        .myborder {
-            padding: 2px;
-            width: 350px;
-            height: 350px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px;
-            background: rgb(131, 58, 180);
-            background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
-            border-radius: 10px;
-        }
+            h1 {
+                color: #4cf88f;
+                font-size: 90px;
+            }
 
-        #start {
-            width: 80%;
-            height: 200px;
-            background: #ea2ef5;
-            border: 1px solid #ea2ef5;
-            border-radius: 50px;
-            margin: 77px 0 25px 0px;
-            font-size: 120px;
-            font-weight: 600;
-        }
+            h1 span {
+                font-size: 35px;
+            }
+
+            .myborder {
+                padding: 2px;
+                width: 350px;
+                height: 350px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 20px;
+                background: rgb(131, 58, 180);
+                background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+                border-radius: 10px;
+            }
+
+            #start {
+                width: 80%;
+                height: 200px;
+                background: #ea2ef5;
+                border: 1px solid #ea2ef5;
+                border-radius: 50px;
+                margin: 77px 0 25px 0px;
+                font-size: 120px;
+                font-weight: 600;
+            }
 
 
 
-        #buttons button {
-            margin: 10px 10px;
-            background: black;
-            border: 1px solid #00c1c0;
-            color: white;
-            height: 50px;
-            font-size: 23px;
-            padding: 1px;
-            width: 50px;
-        }
+            #buttons button {
+                margin: 10px 10px;
+                background: black;
+                border: 1px solid #00c1c0;
+                color: white;
+                height: 50px;
+                font-size: 23px;
+                padding: 1px;
+                width: 50px;
+            }
 
-        #text {
-            color: #f7e600;
-            /* margin: 5px 0; */
-            font-size: 50px;
-            margin-bottom: 5px;
+            #text {
+                color: #f7e600;
+                /* margin: 5px 0; */
+                font-size: 50px;
+                margin-bottom: 5px;
 
-        }
+            }
 
-        #reset {
-            width: 350px;
-            height: 100px;
-            background: #00f2e3;
-            /* margin: 10px 0; */
-            border: 1px solid #00f2e3;
-            font-size: 50px;
-            border-radius: 50px;
-            margin-top: 20px;
-            font-weight: 600;
-        }
+            #reset {
+                width: 350px;
+                height: 100px;
+                background: #00f2e3;
+                /* margin: 10px 0; */
+                border: 1px solid #00f2e3;
+                font-size: 50px;
+                border-radius: 50px;
+                margin-top: 20px;
+                font-weight: 600;
+            }
 
-        #gameover {
-            font-size: 350px;
-            margin-top: 55px;
-            color: white;
-        }
+            #gameover {
+                font-size: 350px;
+                margin-top: 55px;
+                color: white;
+            }
 
-        #gameoverdiv span {
-            font-size: 50px;
-            color: #ff0707;
-            font-weight: bold;
-        }
+            #gameoverdiv span {
+                font-size: 50px;
+                color: #ff0707;
+                font-weight: bold;
+            }
 
-        #gameoverdiv {
-            height: 750px;
-            width: 750px;
-            background: rgb(0, 0, 0);
-            z-index: 1000;
-            position: absolute;
-            top: 50%;
-            padding: 30px 0px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 4px solid transparent;
-            border-image: linear-gradient(45deg, #ff0, #f0f, #f00, #00f, #0f0);
-            border-image-slice: 1;
-            display: none;
-        }
+            #gameoverdiv {
+                height: 750px;
+                width: 750px;
+                background: rgb(0, 0, 0);
+                z-index: 1000;
+                position: absolute;
+                top: 50%;
+                padding: 30px 0px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border: 4px solid transparent;
+                border-image: linear-gradient(45deg, #ff0, #f0f, #f00, #00f, #0f0);
+                border-image-slice: 1;
+                display: none;
+            }
 
-        #resettwo {
-            width: 80%;
-            height: 120px;
-            margin-top: 30px;
-            font-size: 60px;
-            background: #00f2e3;
-            color: black;
-            border: none;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            font-weight: 600;
-            justify-content: center;
-            padding: 22px 0;
-        }
+            #resettwo {
+                width: 80%;
+                height: 120px;
+                margin-top: 30px;
+                font-size: 60px;
+                background: #00f2e3;
+                color: black;
+                border: none;
+                border-radius: 50px;
+                display: flex;
+                align-items: center;
+                font-weight: 600;
+                justify-content: center;
+                padding: 22px 0;
+            }
 
-        /* @media only screen and (max-width: 900px) {
+            /* @media only screen and (max-width: 900px) {
 
             body {
                 height: 100%;
             }
 
+=======
+/* 
+        @media only screen and (max-width: 900px) {
+>>>>>>> 6b10697531f9d5a4cdfc83a1a7081ea01cfeae91
             .container {
                 transform: translate(0px, 0px);
                 position: relative;
@@ -209,6 +216,7 @@
                 width: 350px;
                 height: 50px;
                 background: #00f2e3;
+<<<<<<< HEAD
                 margin: 10px 0;
         border: 1px solid #00f2e3;
         font-size: 35px;
@@ -222,13 +230,27 @@
         }
 
         */
-        /* } */
-    </style>
+            /* } */
+
+            /* margin: 10px 0; */
+            /*                 border: 1px solid #00f2e3;
+                font-size: 35px;
+                border-radius: 50px;
+                margin-top: 20px;
+                font-weight: 600;
+            }
+
+            #number {
+                font-size: 120px;
+            }
+
+        } */
+        </style>
 
 
 
 
-</head>
+    </head>
 
 <body>
     <div class="container">
